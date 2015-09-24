@@ -177,4 +177,3 @@ Una vez que nuestro documento (llamémosle «HolaMundo.tex») está preparado, e
     Patashnik, Oren: BibTeXing, February 1988. URL http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/btxdoc.pdf
     Patashnik, Oren: Designing BibTeX Styles, February 1988. URL http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/btxhak.pdf
     Seidel, Luis: Bases de datos bibliográficas, LaTeX y el idioma español, March 1998. URL ftp://tex.unirioja.es/pub/tex/doc/bibliogr.pdf
-

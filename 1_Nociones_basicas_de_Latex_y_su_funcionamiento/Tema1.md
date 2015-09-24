@@ -107,6 +107,6 @@ Finalmente, tras estas órdenes que se suelen poner al principio del documento p
 Todo esto se ampliará más en el tema siguiente; el objetivo de esta sección es simplemente que se comprenda qué es lo que se ha hecho y la estructura muy mínima para crear un documento en castellano.
 
 Trabajando con TexMakerX en Windows
-TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video.
+TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video. 
 
 

@@ -651,4 +651,3 @@ Párrafo perfectamente normal, que colocamos sólo par poder ver el efecto que t
 Nota: Probablemente habrás notado que en \parskip hemos colocado un signo "=", pero en \parindent no. Ambas notaciones son equivalentes y no hay diferencias entre ellas.
 
 Prueba a cambiar los valores y compilar un par de veces, para que veas el efecto que causa.
-

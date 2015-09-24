@@ -334,5 +334,3 @@ Nota el uso de \label para crear una referencia que luego puede usarse en \ref, 
 Existe una ingente cantidad de comandos y símbolos para escribir fórmulas matemáticas en LaTeX y es, de hecho, prácticamente imposible conocerlos todos. Cualquier programa de edición de LaTeX (como, por ejemplo, Texmaker) dispone de atajos y ayudas para esto.
 
 Más adelante en este mismo curso se verán algunos aspectos más avanzados de las fórmulas matemáticas. Mientras tanto, si se necesitan detalles más profundos para la redacción de fórmulas, se puede empezar por consultar esta referencia
-
-

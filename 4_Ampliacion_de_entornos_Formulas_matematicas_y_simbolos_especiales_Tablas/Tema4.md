@@ -536,4 +536,3 @@ La figura \ref{blanco} es un ejemplo de blanco liso.
 
 Francisco J. Blancas Peral, María Cortada García, Eugenio M. Fedriani Martel, Alfredo García Hernández-Díaz, Irene García Selfa, Paula González Rodríguez,Sandra González Salas, Ma del Pilar Moreno Navarro, Raquel Rafael Arenas, Ma Isabel Sanz Domínguez, Ángel F. Tenorio Villalón, María M. Vega Quirós, Guía rápida para el nuevo usuario de LaTeX. http://www.eumed.net/cursecon/libreria/2004/emfm/latex.pdf
 Walter Mora F., Alex Borbón A. Escuela de Matemática Instituto Tecnológico de Costa Rica.Edición de Textos Científicos; Composición, diseño Editorial, Gráficos,, Inkscape, Tikz y Presentaciones Beamer 
-

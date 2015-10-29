@@ -17,7 +17,7 @@ Desde entonces se han hecho diferentes versiones, pero la más popular hoy en d�
   
 En esta página se ofrecen varios enlaces a versiones de LaTeX para todas las distribuciones. Recordad que LaTeX no es un programa como el LibreOffice Writer, que se lanza e incluye todo lo necesario; una instalación descargará una serie de programas exclusivamente para generar a partir del texto el fichero imprimible; no se puede lanzar un programa desde el menú y empezar a editar en él.
 
-Algunos editores de textos permiten trabajar fácilmente desde ellos con LaTeX, con modos que te ahorran teclear cosas y funciones que permiten compilar directamente desde él. Personalmente prefiero el Emacs, disponible para todos los sistemas operativos, con el modo AuCTex. Para instalar todo junto en mi caso y como usuario de Linux, simplemente lo he instalado:
+Algunos editores de textos permiten trabajar fácilmente desde ellos con LaTeX, con modos que te ahorran teclear cosas y funciones que permiten compilar directamente desde él. Personalmente prefiero el Emacs, disponible para todos los sistemas operativos, con el modo AuCTex. Para instalar todo junto, en mi caso y como usuario de Linux, simplemente se ejecuta la siguiente orden en un terminal:
 
 sudo apt-get install auctex texlive emacs. 
 
@@ -39,19 +39,19 @@ Para comenzar y al menos tener prácticamente toda la funcionalidad de LaTeX se 
 El problema principal de Windows es que con LaTeX hay que proveer todo lo necesario para trabajar con él, porque no suele incluir las utilidades habituales en estos casos. Afortunadamente, tratándose de software libre, hay una distribución llamada ProTeXt que tiene todo lo necesario. Sin embargo, hay que descargarse más de un giga para instalarlo; conviene que tengáis más de 3 gigas libres para la instalación completa.
 Afortunadamente, este tutorial procedente de Guatemala nos ayuda a instalarlo: esta es la primera parte, la segunda y la tercera. En todo caso, la instalación se divide en tres partes (después de la hora o así que tarda en descargarse)
 
-    Descomprimir el paquete: se descomprime en un directorio de nuestra elección (tabién tarda un buen rato)
-    Buscar el directorio y ejecutar "setup.exe".
-    Te da la opción de instalar MiKTeX (que sería, en sí, el programa que incluye LaTeX) y un editor, ConTeXt, muy bien adaptado para trabajar con LaTeX. Es conveniente que instales los dos; el primero tardará también un buen rato (media hora), y el segundo sólo un minuto.
+Descomprimir el paquete: se descomprime en un directorio de nuestra elección (tabién tarda un buen rato)
+Buscar el directorio y ejecutar "setup.exe".
+Te da la opción de instalar MiKTeX (que sería, en sí, el programa que incluye LaTeX) y un editor, ConTeXt, muy bien adaptado para trabajar con LaTeX. Es conveniente que instales los dos; el primero tardará también un buen rato (media hora), y el segundo sólo un minuto.
 
 Como has visto, todo el proceso puede durar una buena parte de una mañana o una tarde. Aprovecha para leerte el resto del material del curso, o para reflexionar sobre las ventajas de usar sistemas operativos libres.
 
 ##Trabajando con LaTeX
 
- El equivalente del Hola Mundo en LaTeX
+###El equivalente del Hola Mundo en LaTeX
 LaTeX es un sistema de preparación de documentos y como tal funciona de forma diferente a lo que estamos acostumbrados. Mientras que en los procesadores de textos se trabaja sobre el documento en el formato aproximado en el que saldrá por impresora de forma WYSIWYG, en LaTeX están separadas las fases de edición, visualización y generación del documento en su formato final.
 Para comenzar, por tanto, será necesario usar un editor y teclear o copiar/pegar en él un texto similar al siguiente, obtenido del Diablo Cojuelo publicado en el proyecto Gutenberg
 
- \documentclass{article}
+\documentclass{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \begin{document} Daban en Madrid, por los fines de julio,

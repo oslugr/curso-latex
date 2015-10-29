@@ -23,7 +23,7 @@ sudo apt-get install auctex texlive emacs.
 
 Emacs con este modo tendrá la apariencia que se muestra a continuación  
   
-![Emacs](img/1.png)  
+![Emacs](/img/1.png)  
   
 En otros sistemas operativos se pueden usar los editores de programador que más se hayan usado, buscando siempre uno que incluya detección de sintaxis y alguna que otra función para facilitar la edición.
 

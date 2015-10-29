@@ -13,7 +13,7 @@ Desde entonces se han hecho diferentes versiones, pero la más popular hoy en d�
 
 ##Consiguiendo e instalando LaTeX
 
-En esta página pone enlaces a versiones de LaTeX para todas las distribuciones. Recordad que LaTeX no es un programa como el LibreOffice Writer, que se lanza e incluye todo lo necesario; una instalación descargará una serie de programas exclusivamente para generar a partir del texto el fichero imprimible; no se puede lanzar un programa desde el menú y empezar a editar en él.
+En esta página se ofrecen varios enlaces a versiones de LaTeX para todas las distribuciones. Recordad que LaTeX no es un programa como el LibreOffice Writer, que se lanza e incluye todo lo necesario; una instalación descargará una serie de programas exclusivamente para generar a partir del texto el fichero imprimible; no se puede lanzar un programa desde el menú y empezar a editar en él.
 
 Algunos editores de textos permiten trabajar fácilmente desde ellos con LaTeX, con modos que te ahorran teclear cosas y funciones que permiten compilar directamente desde él. Personalmente prefiero el Emacs, disponible para todos los sistemas operativos, con el modo AuCTex. Para instalar todo junto, simplemente haced:
 

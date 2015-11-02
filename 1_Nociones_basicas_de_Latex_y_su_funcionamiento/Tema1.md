@@ -51,6 +51,7 @@ Como has visto, todo el proceso puede durar una buena parte de una mañana o una
 LaTeX es un sistema de preparación de documentos y como tal funciona de forma diferente a lo que estamos acostumbrados. Mientras que en los procesadores de textos se trabaja sobre el documento en el formato aproximado en el que saldrá por impresora de forma WYSIWYG, en LaTeX están separadas las fases de edición, visualización y generación del documento en su formato final.
 Para comenzar, por tanto, será necesario usar un editor y teclear o copiar/pegar en él un texto similar al siguiente, obtenido del Diablo Cojuelo publicado en el proyecto Gutenberg
 
+```latex
 \documentclass{article}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
@@ -59,6 +60,7 @@ las once de la noche en punto, hora menguada para las calles, y,
 por faltar la luna, juridición y término redondo de todo requiebro
 lechuzo y patarata de la muerte.
 \end{document} 
+```
 
 Editado desde, por ejemplo, Emacs, tendría esta apariencia
 
@@ -104,9 +106,11 @@ En LaTeX, las órdenes comienzan con \ y consisten generalmente en el nombre de 
 Las tres primeras líneas son órdenes: la primera establece el tipo de documento, y es imprescindible porque modifica el resultado de las otras órdenes. Vamos a usar el tipo más simple, artículo, aunque hay muchos otros tipos; los congresos y revistas, generalmente, tienen el suyo propio.
 Las órdenes siguientes:
 
+```latex
 \usepackage[spanish]{babel}
 
 \usepackage[utf8]{inputenc}
+```
 
 son imprescindibles para trabajar en español. En cualquier caso, se trata de paquetes que añaden funcionalidad al documento; el primero es el paquete Babel para trabajar con diferentes idiomas, y le damos la opción de que se trate de español. Esta orden es tenida en cuenta a la hora de dividir las palabras y usar convenciones como la forma de expresar las fechas. El segundo se refiere al alfabeto que vamos a usar en el fichero; LaTeX usa sólo los caracteres "normales" que no incluyen a las letras castellanas: ñ y ú, por ejemplo; con esta orden le decimos que la codificación del fichero de entrada es utf8, el formato de almacenamiento del mismo más usado por los editores hoy en día. Si tenéis algún problema con esto al compilar; si suprimen los caracteres comentados, probad a cambiar utf8 a latin1 (la codificación que incluye a todos los caracteres del alfabeto español).
 Finalmente, tras estas órdenes que se suelen poner al principio del documento pero que no generan ningún tipo de contenido viene un entorno en LaTeX. Los entornos están entre begin y end, y se representan de una forma determinada; en este caso se representarán con el formato que tenga asignado el tipo de documento al principio. Los entornos se cierran en orden contrario al que se abren si están anidados. En este caso, \end{document} será siempre la última orden del documento.

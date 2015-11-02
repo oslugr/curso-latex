@@ -9,30 +9,30 @@ LaTeX, sin embargo, comenzó en 1976 en la forma de TeX, un sistema para poder i
 
 LaTeX era mucho más fácil de usar que TeX, y se concentraba en la estructura del documento, más que en la apariencia. La forma de usarla era la misma: editando un texto al que se le añadían una serie de órdenes; posteriormente el texto se compilaba y se convertía en un formato imprimible (que en 1984 eran muy diferentes a los actuales) o se enviaba directamente a la impresora.
 
-Desde entonces se han hecho diferentes versiones, pero la más popular hoy en día es la 2, aunque se lleva trabajando en la 3 desde hace bastantes años. Dado que LaTeX es software libre, generalmente viene en una serie de distribuciones que incluyen el LaTeX (simplemente un sistema de proceso de textos) junto con otros programas necesarios para hacer el ciclo completo, incluyendo la inclusión de bibliografía y su conversión a diferentes formatos. 
+Desde entonces se han hecho diferentes versiones, pero la más popular hoy en día es la 2, aunque se lleva trabajando en la 3 desde hace bastantes años. Dado que LaTeX es software libre, generalmente viene en una serie de distribuciones que incluyen el LaTeX (simplemente un sistema de proceso de textos) junto con otros programas necesarios para hacer el ciclo completo, incluyendo la inclusión de bibliografía y su conversión a diferentes formatos.
 
 ##Consiguiendo e instalando LaTeX
-  
+
 ###Descargar LaTeX
-  
+
 En esta página se ofrecen varios enlaces a versiones de LaTeX para todas las distribuciones. Recordad que LaTeX no es un programa como el LibreOffice Writer, que se lanza e incluye todo lo necesario; una instalación descargará una serie de programas exclusivamente para generar a partir del texto el fichero imprimible; no se puede lanzar un programa desde el menú y empezar a editar en él.
 
 Algunos editores de textos permiten trabajar fácilmente desde ellos con LaTeX, con modos que te ahorran teclear cosas y funciones que permiten compilar directamente desde él. Personalmente prefiero el Emacs, disponible para todos los sistemas operativos, con el modo AuCTex. Para instalar todo junto, en mi caso y como usuario de Linux, simplemente se ejecuta la siguiente orden en un terminal:
 
-sudo apt-get install auctex texlive emacs. 
+sudo apt-get install auctex texlive emacs.
 
-Emacs con este modo tendrá la apariencia que se muestra a continuación  
-  
-![Emacs](/img/1.png)  
-  
+Emacs con este modo tendrá la apariencia que se muestra a continuación
+
+![Emacs](/img/1.png)
+
 En otros sistemas operativos se pueden usar los editores de programador que más se hayan usado, buscando siempre uno que incluya detección de sintaxis y alguna que otra función para facilitar la edición.
 
-Como se puede ver, hay tres botones a la izquierda que sirven para compilar el fichero; las tres penúltimas opciones del menú también están relacionadas con LaTeX.  
+Como se puede ver, hay tres botones a la izquierda que sirven para compilar el fichero; las tres penúltimas opciones del menú también están relacionadas con LaTeX.
 
-###Resumiendo  
-  
+###Resumiendo
+
 Para usar LaTeX hacen falta dos cosas: una distribución que incluya todos los programas y un editor de textos; si este editor de textos es de programador facilitará la labor de edición de textos.
-Para comenzar y al menos tener prácticamente toda la funcionalidad de LaTeX se puede usar LyX, un entorno WYSIWYG que usa internamente LaTeX para representar la información y puede generar el mismo. 
+Para comenzar y al menos tener prácticamente toda la funcionalidad de LaTeX se puede usar LyX, un entorno WYSIWYG que usa internamente LaTeX para representar la información y puede generar el mismo.
 
 ##Instalando LaTeX en Windows
 
@@ -59,7 +59,7 @@ Para comenzar, por tanto, será necesario usar un editor y teclear o copiar/pega
 las once de la noche en punto, hora menguada para las calles, y,
 por faltar la luna, juridición y término redondo de todo requiebro
 lechuzo y patarata de la muerte.
-\end{document} 
+\end{document}
 ```
 
 Editado desde, por ejemplo, Emacs, tendría esta apariencia
@@ -76,17 +76,17 @@ La configuración por defecto consiste en generar un fichero independiente del d
 
 Estos dos pasos se pueden llevar a cabo también desde la línea de órdenes; es la única forma en la que estarán disponibles en todos los entornos de trabajo. Tras guardar el fichero y situarnos en el directorio donde lo hemos guardado, escribimos
 
-latex prueba.tex 
+latex prueba.tex
 
 Éste fichero (igual que el comando anterior, sólo que de forma invisible) nos habrá generado uno denominado prueba.dvi. Para visualizarlo, se escribe
 
-xdvi prueba.dvi 
+xdvi prueba.dvi
 
 o algún otro programa en otro sistema operativo.
 
 En cualquiera de los dos casos, para generar un PDF a partir del DVI hay que recurrir a la línea de órdenes:
 
-dvipdf prueba.dvi 
+dvipdf prueba.dvi
 
 
 Generación directa de un PDF
@@ -99,7 +99,7 @@ pdflatex prueba.tex
 
 y, posteriormente, para visualizarlo,
 
-evince prueba.pdf 
+evince prueba.pdf
 
 Explicación del texto
 En LaTeX, las órdenes comienzan con \ y consisten generalmente en el nombre de la orden y una serie de argumentos. El argumento va entre llaves y el modificador al mismo entre corchetes y antes de las llaves.
@@ -117,6 +117,6 @@ Finalmente, tras estas órdenes que se suelen poner al principio del documento p
 Todo esto se ampliará más en el tema siguiente; el objetivo de esta sección es simplemente que se comprenda qué es lo que se ha hecho y la estructura muy mínima para crear un documento en castellano.
 
 Trabajando con TexMakerX en Windows
-TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video. 
+TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video.
 
 

@@ -63,16 +63,17 @@ lechuzo y patarata de la muerte.
 ```
 
 Editado desde, por ejemplo, Emacs, tendría esta apariencia
+![Emacs editando LaTeX](/img/2.png)
 
-Emacs editando LaTeX
 Siempre que se use, como se ha indicado, la librería AuCTeX u otra similar; en este caso se trata, simplemente, del denominado modo LaTeX.
 Desde este entorno, la creación del documento se hace en varios pasos y de dos formas diferentes, tras guardar el fichero poniéndole la extensión .tex.
 Generación de fichero independiente del dispositivo
-La configuración por defecto consiste en generar un fichero independiente del dispositivo; es un fichero con la extensión .dvi que, posteriormente, se puede imprimir o convertir a cualquier otro formato de fichero. En este caso, habrá que llevar a cabo dos pasos
+La configuración por defecto consiste en generar un fichero independiente del dispositivo; es un fichero con la extensión .dvi que, posteriormente, se puede imprimir o convertir a cualquier otro formato de fichero. En este caso, habrá que llevar a cabo dos pasos:
 
-    Pulsar el botón con el leoncito, que compilará el fichero. Si no hay ningún error, dará un mensaje en la barra de estado que indicará que se ha podido compilar:"LaTeX: successfully formatted {1} page"; en caso contrario, aparecerá un símbolo que indicará que hay errores.
-    Pulsando sobre las gafas que indican "dvi" se abrirá un programa de visualización del fichero independiente del dispositivo que presentará la apariencia más o menos final del mismo. Desde este programa, aparte de poder hacerse zoom, se pueden también exportar o imprimir, pero generalmente se usa como una "previsualización". La apariencia de este programa es la que se muestra a continuación.
+1    Pulsar el botón con el leoncito, que compilará el fichero. Si no hay ningún error, dará un mensaje en la barra de estado que indicará que se ha podido compilar:"LaTeX: successfully formatted {1} page"; en caso contrario, aparecerá un símbolo que indicará que hay errores.
+2   Pulsando sobre las gafas que indican "dvi" se abrirá un programa de visualización del fichero independiente del dispositivo que presentará la apariencia más o menos final del mismo. Desde este programa, aparte de poder hacerse zoom, se pueden también exportar o imprimir, pero generalmente se usa como una "previsualización". La apariencia de este programa es la que se muestra a continuación.
 
+![Emacs](/img/3.png)
 
 Estos dos pasos se pueden llevar a cabo también desde la línea de órdenes; es la única forma en la que estarán disponibles en todos los entornos de trabajo. Tras guardar el fichero y situarnos en el directorio donde lo hemos guardado, escribimos
 
@@ -91,6 +92,8 @@ dvipdf prueba.dvi
 
 Generación directa de un PDF
 En el caso de tener un fichero que no incluya imágenes como este, también existe la opción de generar directamente un PDF. Se puede hacer desde Emacs: se marca Command-> Texing Options -> Generate Pdf (hay una combinación de teclas para esto, como lo hay para todo en Emacs). Como se ve, los iconos de LaTeX y las gafitas de visualización tienen ahora un PDF en rojo:
+
+![PDF](/img/4.png)
 
 Pulsando sobre el icono de LaTeX se compilará y se generará directamente un PDF; ahora lanzando el visualizador se abrirá el visualizador de PDFs, posiblemente Evince, con el resultado.
 Como hemos explicado anteriormente, también se puede obtener el mismo resultado desde la línea de órdenes, ejecutando

@@ -47,7 +47,8 @@ Como has visto, todo el proceso puede durar una buena parte de una mañana o una
 
 ##Trabajando con LaTeX
 
-###El equivalente del Hola Mundo en LaTeX
+###El equivalente del Hola Mundo en LaTeX  
+
 LaTeX es un sistema de preparación de documentos y como tal funciona de forma diferente a lo que estamos acostumbrados. Mientras que en los procesadores de textos se trabaja sobre el documento en el formato aproximado en el que saldrá por impresora de forma WYSIWYG, en LaTeX están separadas las fases de edición, visualización y generación del documento en su formato final.
 Para comenzar, por tanto, será necesario usar un editor y teclear o copiar/pegar en él un texto similar al siguiente, obtenido del Diablo Cojuelo publicado en el proyecto Gutenberg
 
@@ -62,46 +63,52 @@ lechuzo y patarata de la muerte.
 \end{document}
 ```
 
-Editado desde, por ejemplo, Emacs, tendría esta apariencia
+Editado desde, por ejemplo, Emacs, tendría esta apariencia:
 
-Emacs editando LaTeX
+![Emacs editando LaTeX](/img/2.png)
+
 Siempre que se use, como se ha indicado, la librería AuCTeX u otra similar; en este caso se trata, simplemente, del denominado modo LaTeX.
 Desde este entorno, la creación del documento se hace en varios pasos y de dos formas diferentes, tras guardar el fichero poniéndole la extensión .tex.
-Generación de fichero independiente del dispositivo
-La configuración por defecto consiste en generar un fichero independiente del dispositivo; es un fichero con la extensión .dvi que, posteriormente, se puede imprimir o convertir a cualquier otro formato de fichero. En este caso, habrá que llevar a cabo dos pasos
 
-    Pulsar el botón con el leoncito, que compilará el fichero. Si no hay ningún error, dará un mensaje en la barra de estado que indicará que se ha podido compilar:"LaTeX: successfully formatted {1} page"; en caso contrario, aparecerá un símbolo que indicará que hay errores.
-    Pulsando sobre las gafas que indican "dvi" se abrirá un programa de visualización del fichero independiente del dispositivo que presentará la apariencia más o menos final del mismo. Desde este programa, aparte de poder hacerse zoom, se pueden también exportar o imprimir, pero generalmente se usa como una "previsualización". La apariencia de este programa es la que se muestra a continuación.
+###Generación de fichero independiente del dispositivo  
+  
+La configuración por defecto consiste en generar un fichero independiente del dispositivo; es un fichero con la extensión .dvi que, posteriormente, se puede imprimir o convertir a cualquier otro formato de fichero. En este caso, habrá que llevar a cabo dos pasos:  
+1    Pulsar el botón con el leoncito, que compilará el fichero. Si no hay ningún error, dará un mensaje en la barra de estado que indicará que se ha podido compilar:"LaTeX: successfully formatted {1} page"; en caso contrario, aparecerá un símbolo que indicará que hay errores.  
+2   Pulsando sobre las gafas que indican "dvi" se abrirá un programa de visualización del fichero independiente del dispositivo que presentará la apariencia más o menos final del mismo. Desde este programa, aparte de poder hacerse zoom, se pueden también exportar o imprimir, pero generalmente se usa como una "previsualización". La apariencia de este programa es la que se muestra a continuación.  
 
+![Emacs](/img/3.png)
 
 Estos dos pasos se pueden llevar a cabo también desde la línea de órdenes; es la única forma en la que estarán disponibles en todos los entornos de trabajo. Tras guardar el fichero y situarnos en el directorio donde lo hemos guardado, escribimos
 
-latex prueba.tex
+```latex prueba.tex```
 
 Éste fichero (igual que el comando anterior, sólo que de forma invisible) nos habrá generado uno denominado prueba.dvi. Para visualizarlo, se escribe
 
-xdvi prueba.dvi
+```xdvi prueba.dvi```
 
 o algún otro programa en otro sistema operativo.
 
 En cualquiera de los dos casos, para generar un PDF a partir del DVI hay que recurrir a la línea de órdenes:
 
-dvipdf prueba.dvi
+```dvipdf prueba.dvi```
 
 
-Generación directa de un PDF
+###Generación directa de un PDF  
 En el caso de tener un fichero que no incluya imágenes como este, también existe la opción de generar directamente un PDF. Se puede hacer desde Emacs: se marca Command-> Texing Options -> Generate Pdf (hay una combinación de teclas para esto, como lo hay para todo en Emacs). Como se ve, los iconos de LaTeX y las gafitas de visualización tienen ahora un PDF en rojo:
+
+![PDF](/img/4.png)
 
 Pulsando sobre el icono de LaTeX se compilará y se generará directamente un PDF; ahora lanzando el visualizador se abrirá el visualizador de PDFs, posiblemente Evince, con el resultado.
 Como hemos explicado anteriormente, también se puede obtener el mismo resultado desde la línea de órdenes, ejecutando
 
-pdflatex prueba.tex
+```pdflatex prueba.tex```
 
 y, posteriormente, para visualizarlo,
 
-evince prueba.pdf
+```evince prueba.pdf```
 
-Explicación del texto
+###Explicación del texto  
+  
 En LaTeX, las órdenes comienzan con \ y consisten generalmente en el nombre de la orden y una serie de argumentos. El argumento va entre llaves y el modificador al mismo entre corchetes y antes de las llaves.
 Las tres primeras líneas son órdenes: la primera establece el tipo de documento, y es imprescindible porque modifica el resultado de las otras órdenes. Vamos a usar el tipo más simple, artículo, aunque hay muchos otros tipos; los congresos y revistas, generalmente, tienen el suyo propio.
 Las órdenes siguientes:
@@ -116,7 +123,10 @@ son imprescindibles para trabajar en español. En cualquier caso, se trata de pa
 Finalmente, tras estas órdenes que se suelen poner al principio del documento pero que no generan ningún tipo de contenido viene un entorno en LaTeX. Los entornos están entre begin y end, y se representan de una forma determinada; en este caso se representarán con el formato que tenga asignado el tipo de documento al principio. Los entornos se cierran en orden contrario al que se abren si están anidados. En este caso, \end{document} será siempre la última orden del documento.
 Todo esto se ampliará más en el tema siguiente; el objetivo de esta sección es simplemente que se comprenda qué es lo que se ha hecho y la estructura muy mínima para crear un documento en castellano.
 
-Trabajando con TexMakerX en Windows
-TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video.
+###Trabajando con TexMakerX en Windows   
+  
+TexMaker es un editor libre que funciona en todos los sistemas operativos, pero que forma parte de la distribución ProTeXt que previamente hemos explicado como instalar en Windows. Es un entorno de edición, pero desde el que se pueden llevar a cabo todas las tareas. En el tema siguiente se explica cómo se trabaja con él en más profundidad, pero para que comencéis a usarlos hemos realizado este video.  
+  
+[![Trabajando con TexMakerX](https://youtu.be/3yH9sQF4rGs)](https://www.youtube.com/embed/3yH9sQF4rGs "Texmarker")
 
 

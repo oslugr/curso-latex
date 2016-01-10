@@ -12,20 +12,21 @@ En LaTeX, sin embargo, el titulo de una sección no tiene una presentación defi
 
 Como ya has visto en el capítulo anterior de este curso, cualquier editor de texto plano sirve para escribir LaTeX, pero existen herramientas como Texmaker que facilitan la tarea simplificando y automatizando parte del trabajo.
 
-##Editor de LaTeX Texmaker
+##Editor de LaTeX Texmaker  
+http://www.xm1math.net/texmaker/  
 
 ##Estructura básica de un documento
 
 Todo archivo de LaTeX comienza con una declaración del tipo de documento:
-
+```
 \documentclass{tipo}
-
+```
 Existen multitud de tipos, como "book" para libros, "letter" para cartas, "slides" para transparencias o "article" para artículos. Los tipos se pueden definir (si bien de manera bastante compleja) por medio de módulos externos. El tipo que se elija influirá en la posterior estructura y presentación del documento.
-
+```
 \documentclass, como otros comandos, permite además que se le apliquen algunos modificadores opcionales, como el tamaño base del texto o el tamaño del papel que se usará. Esto se hace colocándolos entre corchetes [] (antes de las llaves{}) y separados por comas del siguiente modo:
 
 \documentclass[a4paper,11pt]{article}
-
+```
 Con esto estamos creando un artículo para una revista y definiendo el tamaño de letra a 11pt (los tamaños válidos son 10, 11 y 12 puntos) y el papel a formato a4
 
 Una vez definido el tipo, ya podemos comenzar el documento en sí.
@@ -33,13 +34,13 @@ Una vez definido el tipo, ya podemos comenzar el documento en sí.
 Todo el contenido del documento (párrafos, imágenes, tablas...) irá colocado entre los comandos \begin{document} y \end{document}, que son los que definen el principio y el final del documento,
 
 De este modo, nuestro artículo inicial tomaría el siguiente aspecto:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
 
 \end{document}
-
+```
 
 Que es un documento de LaTeX en principio perfectamente válido, pero en blanco.
 
@@ -52,18 +53,18 @@ Cuando, a lo largo del curso, hablemos de ubicar algo en la cabecera o "Preámbu
 Por lo que hemos visto hasta el momento, podemos deducir que los comando en LaTeX comienzan siempre con una barra inclinada (\), que los argumentos que se aplican a esos comandos van entre llaves ({}) y que los modificadores se colocan entre corchetes ([])
 
 Por ahora, vamos a dedicarnos al cuerpo del documento (el espacio entre \begin{document} y \end{document}) viendo tres elementos básicos que nunca deben faltar:
-
+```
 \title{Titulo del documento}
 
 \author{Autor}
 
 \date{Fecha}
-
+```
 
 Probablemente no haga falta, pero diremos que son los elementos donde se definen, respectivamente, el Título, Autor y Fecha de creación del documento.
 
 Nuestro artículo va tomando forma, y podemos ir ubicando los datos de un modo parecido a este:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -75,12 +76,12 @@ Nuestro artículo va tomando forma, y podemos ir ubicando los datos de un modo p
 \date{Fecha}
 
 \end{document}
-
+```
 
 Si compilas el ejemplo anterior verás que, pese a que le hemos colocado un título (y un autor, etc), este no aparece por ningún lado.
 
 Esto es porque hemos definido los datos, pero no los estamos presentando. Probemos con el siguiente caso:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -94,7 +95,7 @@ Esto es porque hemos definido los datos, pero no los estamos presentando. Probem
 \maketitle
 
 \end{document}
-
+```
 
 Se diferencia del anterior en la instrucción \maketitle, encargada de construir un título para nuestro documento.
 
@@ -109,7 +110,7 @@ Otra cosa que habrás notado es que la compilación da errores si usas acentos, 
 ##Escribiendo
 
 Vamos a poner un poco de texto, para ir viendo algunas otras peculiaridades de LaTeX:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -121,15 +122,15 @@ Vamos a poner un poco de texto, para ir viendo algunas otras peculiaridades de L
 \date{Fecha}
 
 \maketitle
-
+```
 Algo de contenido que no se muestra como era de esperar
 
 Sin duda pasa algo muy muy raro
-
+```
 % Y esto es tremendamente misterioso
 
 \end{document}
-
+```
 
 De nuevo nos topamos con la idiosincrasia de LaTeX: Todos esos espacios que hemos colocado en las separaciones entre palabra han colapsado a un solo hueco. Recordemos que la filosofía detrás de LaTeX es dedicarnos al contenido y dejarle la presentación y el formato al compilador.
 
@@ -150,17 +151,17 @@ El elemento fundamental para separar y organizar un texto es el párrafo (que, c
 Pero como no sólo de párrafos se organiza un texto, existen una serie de comandos para indicar títulos de diferentes niveles de importancia y separar secciones, capítulos etc.
 
 Por orden de importancia, son:
-
+```
 \part{Texto del Título de este nivel}
 \chapter{Texto del Título de este nivel}
 \section{Texto del Título de este nivel}
 \subsection{Texto del Título de este nivel}
 \subsubsection{Texto del Título de este nivel}
-
+```
 Algunos tipos de documento no usan alguno de estos niveles. Por ejemplo, el tipo "article" no usa el nivel chapter.
 
 Para empezar a ver esto, hagamos un ejemplo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -191,7 +192,7 @@ Texto de relleno bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 
 \end{document}
 
-
+```
 Como puedes ver al compilar este ejemplo, LaTeX se ha ocupado de colocar la numeración ante los títulos. Esto es mucho más cómodo de lo que parece a primera vista porque, si posteriormente hacemos modificaciones y agregamos secciones, LaTeX recalculará toda la numeración sin problemas (haz la prueba agregando alguna).
 
 El comportamiento exacto de esta herramienta se ve afectado por el uso del paquete babel. Prueba a compilar este mismo ejemplo pero sin usar la línea \usepackage[spanish]{babel} (borrándola o comentándola con %)
@@ -201,7 +202,7 @@ Por supuesto, como hemos visto varias veces, el tipo de documento que estamos us
 Pero esto no es todo. Otra utilidad de esta forma de estructurar es que LaTeX puede crar automáticamente el índice de contenidos de nuestro documento.
 
 Para ello tenemos el comando \tableofcontents que se usa, simplemente, insertándolo en el lugar donde queramos que aparezca nuestro índice:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -229,7 +230,7 @@ Texto de relleno bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 Texto de relleno bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 
 \end{document}
-
+```
 
 Nota Importante: A menudo no se muestra ningún cambio en la primera compilación, porque LaTeX debe reconstruir el índice del documento cada vez. Simplemente con volver a compilar de nuevo se resuelve esto.
 
@@ -246,7 +247,7 @@ En realidad, lo que hacen \begin y \end es crear lo que se conoce como un "entor
 Un entorno es una parte de un documento en la que se definen una serie de propiedades o que se comporta o muestra de un modo determinado.
 
 Por ejemplo, para las citas se suele usar el entorno quote, y para alinear el texto a la derecha se usa flushright, del siguiente modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -258,23 +259,23 @@ Por ejemplo, para las citas se suele usar el entorno quote, y para alinear el te
 \date{Fecha}
 
 \maketitle
-
+```
 Esto es un texto normal en el propio body, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-
+```
 \begin{quote}
-
+```
 Y esto es un texto en un entorno de quote, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-
+```
 \end{quote}
 
 \begin{flushright}
-
+```
 Y esto otro es un texto en un entorno flushleft, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-
+```
 \end{flushright}
 
 \end{document}
-
+```
 
 Según el tipo de documento, quote puede cambiar el tipo de letra, la indentación, etc.
 
@@ -289,7 +290,7 @@ Probablemente la razón por la que LaTeX es famoso es su increíble capacidad pa
 Los comandos, símbolos y lenguaje necesarios para ello son demasiados y demasiado complejos, por lo que se escapan de las posibilidades de este curso, pero aquí veremos una pequeña introducción a su uso.
 
 La forma más simple de escribir una fórmula matemática es "en línea", colocando la fórmula en cuestión entre los símbolos $ y $, de este modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -297,13 +298,13 @@ La forma más simple de escribir una fórmula matemática es "en línea", coloca
 La ecuacion mas famosa de la historia de la fisica probaablemente sea la de $E=m*c^2$, de donde se deduce que $c=\sqrt{E/m}$.
 
 \end{document}
-
+```
 
 Nota que LaTeX ha interpretado La fórmula, representándola correctamente.
 
 También pueden escribirse mediante los entornos displaymath, que coloca la ecuación en un párrafo aparte y centrada, o equation, que le asigna un número de orden y por tanto es más adecuado para identificar una ecuación y poder referenciarla luego:
 
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -313,9 +314,9 @@ También pueden escribirse mediante los entornos displaymath, que coloca la ecua
 \sum_{0\le i\le m\\0<j<n}P(i, j)
 
 \end{displaymath}
-
+```
 Hay muchos simbolos y toda un compleja sintaxis para escribir matematicas en LaTeX
-
+```
 \begin{equation}
 
 \label{miecuacion}
@@ -327,7 +328,7 @@ f(x)=\sqrt{g’(x)dx}+Z
 La ecuacion que se puede ver en \ref{miecuacion} es completamente inventada y no tiene sentido fisico
 
 \end{document}
-
+```
 
 Nota el uso de \label para crear una referencia que luego puede usarse en \ref, de modo que coloque automáticamente el número correspondiente a la ecuación.
 

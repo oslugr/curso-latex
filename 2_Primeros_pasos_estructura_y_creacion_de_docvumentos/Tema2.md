@@ -12,7 +12,7 @@ En LaTeX, sin embargo, el titulo de una sección no tiene una presentación defi
 
 Como ya has visto en el capítulo anterior de este curso, cualquier editor de texto plano sirve para escribir LaTeX, pero existen herramientas como Texmaker que facilitan la tarea simplificando y automatizando parte del trabajo.
 
-##Editor de LaTeX Texmaker  
+###Editor de LaTeX Texmaker  
 http://www.xm1math.net/texmaker/  
 
 ##Estructura básica de un documento
@@ -48,7 +48,7 @@ El "Preámbulo" es todo aquello que hay antes de \begin{document} (pero siempre 
 
 Cuando, a lo largo del curso, hablemos de ubicar algo en la cabecera o "Preámbulo", nos referiremos a este sitio.
 
-##Creando contenido
+###Creando contenido
 
 Por lo que hemos visto hasta el momento, podemos deducir que los comando en LaTeX comienzan siempre con una barra inclinada (\), que los argumentos que se aplican a esos comandos van entre llaves ({}) y que los modificadores se colocan entre corchetes ([])
 
@@ -107,7 +107,7 @@ Prueba a cambiar el tipo de documento por "book" y verás como el resultado es d
 
 Otra cosa que habrás notado es que la compilación da errores si usas acentos, Ñs o ese tipo de caracteres. Un poco de paciencia: Más adelante veremos cómo arreglar eso.
 
-##Escribiendo
+###Escribiendo
 
 Vamos a poner un poco de texto, para ir viendo algunas otras peculiaridades de LaTeX:
 ```
@@ -144,7 +144,7 @@ Otra cosa que descubrimos es que el signo % se usa para marcar los comentarios. 
 
 Latex introducirá automáticamente retornos de carro donde sea necesario para ajustar la línea al ancho de página (más adelante veremos que se puede ajustar este comportamiento a las reglas de cada idioma), si quiere forzarse a que respte un espacio y no separe dos palabras en líneas distintas, se debe usar la tilde (~) entre ellas.
 
-## Capítulos y secciones
+### Capítulos y secciones
 
 El elemento fundamental para separar y organizar un texto es el párrafo (que, como vimos, se crea separándolo del resto del texto por una línea en blanco).
 

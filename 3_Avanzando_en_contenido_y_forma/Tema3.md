@@ -1,32 +1,32 @@
 ##Acentos y UTF-8
 
 Por defecto, LaTeX sólo usa ASCII y, si se quieren poner acentos, debe hacerse del siguiente modo:
-
+```
 'a 'e 'i 'o 'u
-
+```
 
 del mismo modo, por ejemplo, la letra ñ se pondría del siguiente modo:
-
+```
 \~n
-
+```
 
 La fórmula es similar para otros caracteres fuera del ASCII, como se puede ver en los siguientes ejemplos:
-
+```
 \"o \^u \AE \=e \.o \c c
-
+```
 
 Para poder usar tildes, Ñs y otros caracteres no-ASCII directamente, hay que cargar el juego de caracteres correspondiente con inputenc. Es recomendable el uso de UTF-8, que se cargaría de este modo (en la cabecera de nuestro documento, claro).
-
+```
 \usepackage[utf8]{inputenc}
-
+```
 
 Otro paquete interesante a ese respecto es babel, que permitirá a LaTeX el manejo de las peculiaridades del español, como las reglas de separación de sílabas a final de línea o el manejo de signos de puntuación.
-
+```
 \usepackage[spanish]{babel}
-
+```
 
 De este modo, muestro documento ya empieza a parecerse a esto:
-
+```
 \documentclass[a4paper,11pt]{article} \usepackage[spanish]{babel} 
 
 \usepackage[utf8]{inputenc}
@@ -36,22 +36,22 @@ De este modo, muestro documento ya empieza a parecerse a esto:
 Por fin ya podemos usar eñes, acentos, diéresis y esa tonterías.
 
 \end{document}
-
+```
 
 Existen otros comandos para agregar caracteres especiales como, por ejemplo:
-
+```
 \ldots
-
+```
 
 Esto colocará tres puntos suspensivos.
 
-##  Caracteres especiales
+###  Caracteres especiales
 Alguno símbolos tienen un significado especial, y el compilador de LaTeX los interpreta como instrucciones. Este es el caso, por ejemplo, de la barra "\" para iniciar comandos, las llaves "{" y "}" para las opciones de estos o el signo del dolar "$", que vimos en las foŕmulas matemáticas.
 
 Para evitar este significado especial y que se imprima el carácter en sí mismo en lugar de ser interpretado por el compilador (a esto se le llama "escapar" un carácter), lo que se hace normalmente es agregar una barra "\" delante, de este modo:
-
+```
 \{, \}, \$, \[, \], \%
-
+```
 Pero ¿Cómo escapamos la propia barra? (Hacer "\" no sirve, porque sabemos que eso es una nueva línea).
 
 Para ello tenemos el comando \textbackslash (en realidad, el código de un carácter especial), que inserta el signo \ en su lugar.
@@ -63,7 +63,7 @@ En este enlace puedes ver una lista de caracteres para LaTeX (PDF).
 ##Tipos de letra
 
 LaTeX soporta una serie de tipografías (tipos de letra) que pueden asignarse a un fragmento de texto. Para ello provee de los siguientes comandos
-
+```
 \rm Roman (redonda seriff, la tipografía normal)
 \em Italic (cursiva)
 \bf Boldface (negrita)
@@ -71,10 +71,10 @@ LaTeX soporta una serie de tipografías (tipos de letra) que pueden asignarse a 
 \sf Sans Serif (sin seriff, de "palo seco")
 \sc Small Caps (todas mayúsculas, solo cambia el tamaño)
 \tt Typewriter (De "paso fijo" o monotype)
-
+```
 
 Cuando introducimos en el texto uno de estos comandos, modificará todo el texto subsiguiente, hasta que llegue a otro comando que vuelva a cambiarlo. Este no es un comportamiento demasiado eficiente, por lo que el modo adecuado para cambiar la tipográfica un pequeño trozo de texto es encerrarlo entre llaves junto con el comando del siguiente modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -98,10 +98,10 @@ Cuando introducimos en el texto uno de estos comandos, modificará todo el texto
 {\tt Typewriter} (De "paso fijo" o monotype).
 
 \end{document}
-
+```
 
 Esto es válido si el texto a modificar es relativamente corto. Para partes mayores o más complejas es mejor usar (como no), un entorno:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -153,31 +153,31 @@ Typewriter (De "paso fijo" o monotype). Usando un entorno, que es más cómodo e
 \end{tt}
 
 \end{document}
-
-##Más tipos de letra
+```
+###Más tipos de letra
 
 Otra opción para cambiar la tipografía es con la combinación de Series, Formas y Familias:
 
 Series:
-
+```
 \mdseries Medium (peso normal)
 \bfseries Boldface (negrita)
-
+```
 Formas:
-
+```
 \upshape Upright (Recta normal)
 \itshape Italic (cursiva)
 \slshape Slanted (inclinada)
 \scshape Small Caps (todas mayúsculas, solo cambia el tamaño)
-
+```
 Familias:
-
+```
 \rmfamily Roman (redonda seriff, la tipografía normal)
 \sffamily Sans Serif (sin seriff, de "palo seco")
 \ttfamily Typewriter (De "paso fijo" o monotype)
-
+```
 Aunque los nombres son son algo más engorrosos, el uso es exactamente el mismo que hemos visto antes, con la salvedad de que estos comandos nos permiten combinar varias propiedades para, por ejemplo, escribir un texto en Sans Seriff cursiva:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -199,11 +199,11 @@ Familia Roman en negrita
 \end{rmfamily}
 
 \end{document}
-
+```
 
 Nota: Algunas combinaciones pueden no representarse adecuadamente en algunos equipos.
 
-##Cambiado el tamaño de la letra
+###Cambiado el tamaño de la letra
 
 Como recordarás, al principio de cada documento , en la declaración \documentclass, tenemos opción a indicar el tamaño de la fuente por defecto. Los valores permitidos son 10pt (que es también el valor por defecto), 11pt y 12 pt.
 
@@ -212,7 +212,7 @@ Pero también, del mismo modo que hemos visto con la familia o el peso de la let
 Nota: Si hemos elegido en \documentclass un tamaño de 12pt, los tamaños \huge y \Huge se verán igual.
 
 El tamaño por defecto es, como su propio nombre indica, \normalsize. y será el que hayamos puesto en \documentclass o, en su defecto, de 10pt.
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -232,16 +232,16 @@ Texto en largue y, por tanto, grandote
 \end{Large}
 
 \end{document}
-
+```
 
 Como puedes comprobar, se usa del mismo modo que ya hemos visto, y se puede combinar con las opcione de tipos y familas de letras.
 
-## Unidades de medida
+###Unidades de medida
 
 A lo lago de este curso se han ido usando una serie de unidades para medir tamaños. Concretamente, se ha usado el punto (pt) que es una popular medida tipográfica y suele usarse para medir tamaños de letras y distancias o espacios en el texto, y el centímetro (cm), que forma parte del sistema métrico y no necesita ser explicado.
 
 LaTeX admite el uso de una gran variedad de unidades, algunas de las cuales pueden ser más convenientes en según qué circunstancias:
-
+```
 mm (Milímetro) 1/1000 de metro en el sistema métrico decimal.
 cm (Centímetro) 1/100 de metro en el sistema métrico decimal.
 
@@ -255,19 +255,19 @@ dd (Didôt Point) Antigua medida tipográfica francesa de 0.376 mm
 cc (Cicero) 12 dd
 
 sp (Scaled point) 1/65536 de pt ¡No es una errata!
-
+```
 Además de todas las anteriores, que son absolutas y su valor no cambia nunca, también hay un juego de unidades relativas, que dependen del tamaño de la tipografía que se esté usando:
-
+```
 ex (Equis) Altura de la letra “x” de la letra que se esté usando en un momento dado.
 em Eme Anchura de la letra “M” de la letra que se esté usando en un momento dado.
 mu 1/18 de em.
-
+```
 ## Listas
 
 Una lista es, básicamente una sucesión de elementos colocados unos después de otro. Las listas pueden ser "ordenadas" cuando tienen una numeración que indica un orden o "desordenadas" cuando no existe tal numeración.
 
 Para hacer una lista ordenada de elementos se usa el entorno enumerate de este modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -287,14 +287,14 @@ Para hacer una lista ordenada de elementos se usa el entorno enumerate de este m
 \end{enumerate}
 
 \end{document}
-
+```
 
 Como se puede ver, cada uno de los elementos está precedido del comando \item (Recordemos que LaTeX ignora los espacios, la indentación en el ejemplo de arriba es solo por claridad en el ejemplo y no es necesaria).
 
 Como ya nos tiene acostumbrados, LaTeX asigna por sí mismo los números (o letras, luego veremos) de orden, de modo que se reconstruirán automáticamente cada vez que haya algún cambio.
 
 Naturalmente, las listas pueden anidarse unas dentro de otras para profundizar niveles. Para ello sólo hay que crear otro entorno enumerate dentro del anterior:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -330,12 +330,12 @@ Naturalmente, las listas pueden anidarse unas dentro de otras para profundizar n
 \end{enumerate}
 
 \end{document}
-
+```
 
 Como puedes ver en el resultado compilado, LaTeX identifica los distintos niveles asignándoles por sí mismo una forma diferente de numeración (este entorno admite hasta cuatro niveles de anidamiento).
 
 Para listas sin ordenar (esto es: no numeradas) se utiliza el entorno itemize exactamente del mismo modo que hemos visto el anterior:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -371,10 +371,10 @@ Para listas sin ordenar (esto es: no numeradas) se utiliza el entorno itemize ex
 \end{itemize}
 
 \end{document}
-
+```
 
 Por supuesto, es posible combinar ambos entornos anidando unos dentro de otros:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -410,15 +410,15 @@ Por supuesto, es posible combinar ambos entornos anidando unos dentro de otros:
 \end{itemize}
 
 \end{document}
-
+```
 ##Primeras tablas
 
 De modo similar a otros elementos, una tabla se inicia creando un entorno (tabular) con la orden \begin{tabular} y finaliza con \end{tabular}
 
 En /begin{tabular} hemos de definir también el estilo de la tabla, del siguiente modo:
-
+```
 \begin{tabular}{|c||c|}
-
+```
 
 En esta instrucción estamos definiendo dos columnas separadas por líneas verticales dobles (indicadas con el "||") y rodeadas por por líneas verticales simples ("|"). Si se hubiense puesto
 
@@ -428,7 +428,7 @@ Dentro de la tabla, cada fila se separa de las demás por medio de los signos //
 Si queremos insertar líneas horizontales, lo haremos mediante la orden \hline
 
 De este modo, una tabla simple sería como sigue:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -448,12 +448,12 @@ Abajo a la izquierda & Abajo a la derecha \
 \end{tabular}
 
 \end{document}
-
+```
 
 Una tabla así creada se colocará en el lugar donde hayamos insertado el código. Pero LaTeX es mucho más potente y permite colocarla como un elemento flotante, de modo que sea él mismo el que ajuste dónde ubicarla en función del espacio o la distribución del resto de elementos. Para ello tenemos la orden \begin{table}
 
 Si envolvemos nuestra tabla anterior en este comando del siguiente modo
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \begin{document}
@@ -477,7 +477,7 @@ Abajo a la izquierda & Abajo a la derecha \
 \end{table}
 
 \end{document}
-
+```
 
 La tabla será manejada como un elemento flotante, y ubicada en función del resto de elementos.
 
@@ -488,7 +488,7 @@ A la hora de distribuir los elementos en la página, LaTeX trabaja internamente 
 También es posible trabajar con estas cajas directamente.
 
 El comando \mbox simplemente creará una caja con el texto que se le indique entre las llaves, y \fbox hará lo mismo pero con un marco alrededor de la caja:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -500,9 +500,9 @@ El comando \mbox simplemente creará una caja con el texto que se le indique ent
 \fbox{pero este texto está enmarcado}
 
 \end{document}
-
+```
 Para tener más control sobre estas cajas, se pueden usarl los comandos \makebox y \framebox, que funcionan igual que los anteriores, pero permiten definir el tamaño de la caja y la alineación del texto en ella:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -514,12 +514,12 @@ Para tener más control sobre estas cajas, se pueden usarl los comandos \makebox
 \framebox[15cm][s]{Caja de 15 centímetros con texo justificado}
 
 \end{document}
-
+```
 
 El primer parámetro opcional el el ancho de la caja (si es menor que el texto, este se saldrá fuera), y el segundo es la alineación del texto (r para derecha, l para izquierda, c para centrado y s para justificado)
 
 Un par de comandos muy interesantes para este contexto son \width, que nos devuelve el ancho del elemento y \height, que nos dá el alto. Ambos pueden ser usados como parámetros. Mucho más útil es \linewidth, que nos da el ancho total de la línea, y que se podría usar del siguiente modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -531,14 +531,14 @@ Un par de comandos muy interesantes para este contexto son \width, que nos devue
 \framebox[0.5\linewidth][c]{Caja de 1/2 del ancho total}
 
 \end{document}
-
+```
 
 nota que, al multiplicar \linewidth por 0.5, obtenemos la mitad del ancho total de la línea.
 
 Pero esto sólo nos permite hacer cajas de una línea. Para hacer cajas con párrafos completos necesitamos el entorno minipage.
 
 El entorno minipage nos crea, como su propio nombre indica, una caja que actúa como una página en miniatura.
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -558,7 +558,7 @@ Otra caja con minipage
 \end{minipage}
 
 \end{document}
-
+```
 
 Este entorno acepta muchas más opciones y modificadores. En capítulos sucesivos veremos más herramientas para ampliar y mejorar su uso y el de las cajas en general.
 
@@ -567,15 +567,15 @@ Este entorno acepta muchas más opciones y modificadores. En capítulos sucesivo
 Ya vimos cómo, al declarar el tipo de documento, podíamos asignar el formato del papel que usaríamos. Usando ese dato y el tipo del documento, y con la autonomía a la que ya nos tiene acostumbrados, LaTeX calculará automáticamente los márgenes necesarios en la página.
 
 Pero, si por alguna razón queremos forzar otra medida, el paquete anysize puede solucionarlo de un modo simple y cómodo. Para ello debe llamarse al paquete en el preámbulo como ya hemos visto en otros casos:
-
+```
 \usepackage{anysize}
-
+```
 Despues, sólo tenemos que llamar (también en el preámbulo) a la orden \marginsize del siguiente modo:
-
+```
 \marginsize{izquierda}{derecha}{arriba}{abajo}
-
+```
 Veámoslo con un ejemplo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -603,7 +603,7 @@ Texto de relleno bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 Texto de relleno bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 
 \end{document}
-
+```
 
 Prueba varios valores para los márgenes para así apreciar los cambios.
 
@@ -612,9 +612,9 @@ Otro paquete para modificar la geomería de la página mucho más poderoso (pero
 Este paquete permite modificar la disposición de todos los elementos de la página, márgenes, posiciones, tamaños...
 
 Se llama en en preámbulo, como cualquier otro paquete, del modo que ya hemos visto:
-
+```
 \usepackage{geometry}
-
+```
 Para conocer más detalles sobre su uso, puedes visitar este documento (PDF) con la descripción del paquete geometry.
 
 ## Indentado y espacios entre párrafos
@@ -626,7 +626,7 @@ Por ejemplo, \parindent 3cm define que la indentación debe ser de 3 centímetro
 El comando \parskip se comporta exactamente igual, pero se aplica al espacio entre párrafos.
 
 Ambos deben ser usados en el preámbulo del documento, de este modo:
-
+```
 \documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -646,7 +646,7 @@ Párrafo perfectamente normal, que colocamos sólo par poder ver el efecto que t
 Párrafo perfectamente normal, que colocamos sólo par poder ver el efecto que tienen los cambios en los márgenes y espacios. Naturalmente, harán falta dos o tres como este.
 
 \end{document}
-
+```
 
 Nota: Probablemente habrás notado que en \parskip hemos colocado un signo "=", pero en \parindent no. Ambas notaciones son equivalentes y no hay diferencias entre ellas.
 

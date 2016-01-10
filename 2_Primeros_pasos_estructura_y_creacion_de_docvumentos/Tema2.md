@@ -122,11 +122,11 @@ Vamos a poner un poco de texto, para ir viendo algunas otras peculiaridades de L
 \date{Fecha}
 
 \maketitle
-```
+
 Algo de contenido que no se muestra como era de esperar
 
 Sin duda pasa algo muy muy raro
-```
+
 % Y esto es tremendamente misterioso
 
 \end{document}
@@ -259,19 +259,19 @@ Por ejemplo, para las citas se suele usar el entorno quote, y para alinear el te
 \date{Fecha}
 
 \maketitle
-```
+
 Esto es un texto normal en el propio body, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-```
+
 \begin{quote}
-```
+
 Y esto es un texto en un entorno de quote, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-```
+
 \end{quote}
 
 \begin{flushright}
-```
+
 Y esto otro es un texto en un entorno flushleft, seguido de algo de relleno sin contenido intelectual real (salvo el meramente textual) para hacer un poco de bulto y que no se vea tan soso ni tan cortito.
-```
+
 \end{flushright}
 
 \end{document}
@@ -334,4 +334,4 @@ Nota el uso de \label para crear una referencia que luego puede usarse en \ref, 
 
 Existe una ingente cantidad de comandos y símbolos para escribir fórmulas matemáticas en LaTeX y es, de hecho, prácticamente imposible conocerlos todos. Cualquier programa de edición de LaTeX (como, por ejemplo, Texmaker) dispone de atajos y ayudas para esto.
 
-Más adelante en este mismo curso se verán algunos aspectos más avanzados de las fórmulas matemáticas. Mientras tanto, si se necesitan detalles más profundos para la redacción de fórmulas, se puede empezar por consultar esta referencia
+Más adelante en este mismo curso se verán algunos aspectos más avanzados de las fórmulas matemáticas. 

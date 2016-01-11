@@ -1,6 +1,6 @@
 ##El estado mental correcto.
 
-Como ya hemos apuntado, los editores para LaTeX no sen comporta igual que otros editores de texto de tipo WYSIWYG, sino que más bien funciona como un lenguaje de programación, en el que se crea un archivo fuente que hay que compilar.
+Como ya hemos apuntado, los editores para LaTeX no se comporta igual que otros editores de texto de tipo WYSIWYG, sino que más bien funciona como un lenguaje de programación, en el que se crea un archivo fuente que hay que compilar.
 
 LaTeX se mueve como pez en el agua en el entorno de las publicaciones científicas. La mayor parte de las primeras revistas del mundo exigen que los trabajos sean enviados en este formato. Esto es muy conveniente dada la separación natural que LaTeX impone entre información y presentación: El autor pone lo primero, y la revista se encargará de dar lo segundo.
 
